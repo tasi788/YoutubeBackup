@@ -2,7 +2,6 @@ import os
 import re
 import youtube_dl
 import subprocess
-from colorama import Fore, Back, Style
 
 ydl_opts = {
 	'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]',
@@ -30,4 +29,4 @@ try:
 					with open('error','a') as err:
 						err.write('%s\n' % (x))
 except:
-	print(Fore.RED + '找不到yt.html啦。')
+	print('\x1b[31m找不到yt.html啦。')
