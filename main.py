@@ -21,3 +21,5 @@ try:
 	print('\x1b[38;33m#'*w)
 except KeyboardInterrupt:
 	print('\x1b[38;96m\n掰掰~')
+except:
+	print('err')

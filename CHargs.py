@@ -4,6 +4,7 @@ import youtube_dl
 import subprocess
 ydl_opts = {
 	'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]',
+	'ignoreerrors': True
 }
 os.system('rm *.mp4')
 x = sys.argv[1]
@@ -28,6 +29,8 @@ with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 				except:
 					with open('error','a') as err:
 						err.write('%s\n' % (x))
+	except KeyboardInterrupt:
+		print('\x1b[38;96m\n被你關掉惹')
 	except:
 		check = open('check.txt','r').read().split('\n')
 		if x in check:
