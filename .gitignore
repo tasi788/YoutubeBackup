@@ -1,0 +1,16 @@
+
+__pycache__/
+
+\.vscode/
+
+client_secrets\.json
+
+dl\.py
+
+settings\.yaml
+
+config\.txt
+
+cred\.json
+
+youtubebackup/
